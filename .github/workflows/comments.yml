@@ -2,7 +2,7 @@ name: Commit comments
 on:
   push:
     branches:
-      - ptb
+      - stable
 
 jobs:
   comments:
