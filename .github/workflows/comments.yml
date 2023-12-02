@@ -2,7 +2,7 @@ name: Commit comments
 on:
   push:
     branches:
-      - stable
+      - ptb
 
 jobs:
   comments:
@@ -13,3 +13,4 @@ jobs:
         uses: EastArctica/comments-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
