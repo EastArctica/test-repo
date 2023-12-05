@@ -1,0 +1,16 @@
+name: Commit comments
+on:
+  push:
+    branches:
+      - ptb
+
+jobs:
+  comments:
+    name: Commit comments
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on commit
+        uses: EastArctica/comments-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
